@@ -11,15 +11,15 @@ Codinge Quiz starts when the start button is pressed. It is necessary to give an
 
 ## Gitpage reference
 
-https://secretariuss.github.io/password-generator/
+
 
 ## Screen shots
 
 The following scrshots shows the web application's:
 
-![scrshot1](./assets/images/pg1.png)
+<!-- ![scrshot1](./assets/images/pg1.png)
 ![scrshot2](./assets/images/pg2.png)
-![scrshot3](./assets/images/pg3.png)
+![scrshot3](./assets/images/pg3.png) -->
 
 ## Acceptance Criteria
 GIVEN I am taking a code quiz
