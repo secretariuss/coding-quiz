@@ -73,3 +73,34 @@ button:hover {
   border-radius: 8px;
   background-color: #351C75;
 }
+
+.container-questions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  vertical-align: middle;
+  width: 100%;
+  vertical-align: middle;
+  align-items: center;
+}
+.container-questions .questionTitle{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  line-height: auto;
+  align-items: center;
+}
+.container-questions .timerCountdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  line-height: auto;
+  top: 0;
+  right: 300px;
+}

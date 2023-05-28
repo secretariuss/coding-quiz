@@ -24,13 +24,24 @@
       </p>
       <button id="start" class="btn-start">Start Quiz</button>
     </section>
-    <section id="container-questions" class="container-questions show">
-      <div id="questionTitle"></div>
-      <div id="choices"></div>
-      <div id="answer" class="answer"></div>
-      <p id="rightOrWrong" class="rightOrWrong"><span></span></p>
-      <div id="timerCountdown" class="timerCountdown"></div>
-    </section>
+    <div id="questions" class="hide">
+
+      <h2 id="question-title"></h2>
+      <div id="choices" class="choices"></div>
+    </div>
+
+    <div id="end-screen" class="hide">
+      <h2>All done!</h2>
+      <p>Your final score is <span id="final-score"></span>.</p>
+      <p>
+        Enter initials: <input type="text" id="initials" max="3" />
+        <button id="submit">Submit</button>
+      </p>
+    </div>
+
+    <div id="feedback" class="feedback hide"></div>
+
+    <article id="yourScore"></article>
   </div>
   <script src="script.js"></script>
 </body>
