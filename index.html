@@ -15,22 +15,23 @@
     <div class="timer">Time: <span id="timerCountdown">0</span></div>
   </header>
   <div class="wrapper">
-    <section>
-      <h1 id="heading">Codinge Quiz Challenge</h1>
+    <section class="start">
+      <h1>Codinge Quiz Challenge</h1>
       <p id="ruls">
         Try to answer the following code-related questions within the time</br>limit. Keeep in mind that incorrect
         answers
         will penalize your score/time</br> by 15 seconds!
       </p>
-      <button id="start" class="btn-start">Start Quiz</button>
+      <button id="start-button" class="button">Start Quiz</button>
     </section>
+
     <div id="questions" class="hide">
 
-      <h2 id="question-title"></h2>
+      <h2 id="heading"></h2>
       <div id="choices" class="choices"></div>
     </div>
 
-    <div id="end-screen" class="hide">
+    <div class="hide">
       <h2>All done!</h2>
       <p>Your final score is <span id="final-score"></span>.</p>
       <p>
@@ -39,9 +40,8 @@
       </p>
     </div>
 
-    <div id="feedback" class="feedback hide"></div>
+    <div id="save-score" class="save-score hide"></div>
 
-    <article id="yourScore"></article>
   </div>
   <script src="script.js"></script>
 </body>

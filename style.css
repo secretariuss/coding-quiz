@@ -53,17 +53,14 @@ section {
   text-align: center;
 }
 
-#heading {
-  color: rgb(51, 51, 255);
-  /* font-size: 50px; */
-}
-
 button:hover {
   color: white;
   background-color: #BD60E7;
 }
 
-.btn-start {
+button {
+  display: inline-block;
+  cursor: pointer;
   color: #c0c6d1;
   outline: none;
   border: none;
@@ -74,33 +71,19 @@ button:hover {
   background-color: #351C75;
 }
 
-.container-questions {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  vertical-align: middle;
-  width: 100%;
-  vertical-align: middle;
-  align-items: center;
+.choices button {
+  display: block;
 }
-.container-questions .questionTitle{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  line-height: auto;
-  align-items: center;
+
+.hide {
+  display: none;
 }
-.container-questions .timerCountdown {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  line-height: auto;
-  top: 0;
-  right: 300px;
+
+.feedback {
+  font-style: italic;
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 10px;
+  color: gray;
+  border-top: 2px solid #ccc;
 }
