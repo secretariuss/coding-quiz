@@ -38,11 +38,12 @@ var endScreen = document.querySelector('end-screen');
 var finalScore = document.querySelector('#final-score');
 var initials = document.querySelector('#initials');
 var saveScore = document.querySelector('#save-score');
-var questiontrack = 0;
+var allDone = document.querySelector('#all-done');
+var questionIndex = 0;
 var userScore = 0;
 
 var results = document.getElementById("results");
-var finalScore = document.getElementById("finalScore");
+
 var initials = document.getElementById("initials");
 var submitBtn = document.getElementById("submitBtn");
 
@@ -54,10 +55,10 @@ startButton.addEventListener("click", function () {
 
 function showQuestions() {
   quizQuestion.setAttribute("class", "");
-  heading.textContent = questions[questiontrack].question
-  for (var i = 0; i < questions[questiontrack].choices.length; i++) {
+  heading.textContent = questions[questionIndex].question
+  for (var i = 0; i < questions[questionIndex].choices.length; i++) {
     var btn = document.createElement('button');
-    btn.textContent = questions[questiontrack].choices[i];
+    btn.textContent = questions[questionIndex].choices[i];
     choices.appendChild(btn);
     btn.setAttribute("id", "choice" + i)
   }
@@ -67,9 +68,7 @@ choices.addEventListener("click", function (event) {
   var answer;
   if (event.target.closest('button')) {
     var selected = event.target.textContent;
-    for (var i = 0; i < questions[questiontrack].answer.length; i++) {
-      answer = questions[questiontrack].answer;
-    }
+    answer = questions[questionIndex].answer;
     if (selected === answer) {
       userScore += 10;
       correct();
@@ -83,12 +82,17 @@ choices.addEventListener("click", function (event) {
 });
 
 function nextQuestion() {
-  for (var i = 0; i < questions[questiontrack].choices.length; i++) {
+  for (var i = 0; i < questions[questionIndex].choices.length; i++) {
     var buttonChosen = document.querySelector('#choice' + i);
-    buttonChosen.textContent = questions[questiontrack].choices[i];
+    buttonChosen.textContent = questions[questionIndex].choices[i];
   }
-  heading.textContent = questions[questiontrack].question;
-  questiontrack++;
+  heading.textContent = questions[questionIndex].question;
+  questionIndex++;
+  if (questionIndex === questions.length) {
+    quizQuestion.setAttribute("style", "display: none;");
+    allDone.setAttribute("class", "");
+    timerCount = finalScore.textContent;
+  }
 }
 
 function runTimer() {
@@ -97,8 +101,10 @@ function runTimer() {
     timerCountdown.textContent = timerCount;
     timerCount--;
 
-    if (timerCount <= -1) {
+    if (timerCount <= -1 || questionIndex === questions.length) {
+      finalScore.textContent = timerCount;
       clearInterval(countDown);
+      
     }
   }, 1000)
 }
@@ -112,3 +118,8 @@ function correct() {
   saveScore.textContent = "Correct!"
   saveScore.setAttribute("class", "")
 }
+
+function finalScore() {
+  timerCount = finalScore.textContent;
+  document.getElementById('finalScore').textContent;
+} 
