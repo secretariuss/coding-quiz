@@ -38,8 +38,6 @@ var endScreen = document.querySelector('end-screen');
 var finalScore = document.querySelector('#final-score');
 var initials = document.querySelector('#initials');
 var saveScore = document.querySelector('#save-score');
-var timerCount = 76;
-timerCount.textContent = 76;
 var questiontrack = 0;
 var userScore = 0;
 
@@ -94,14 +92,13 @@ function nextQuestion() {
 }
 
 function runTimer() {
+  timerCount = 76;
   var countDown = setInterval(function () {
     timerCountdown.textContent = timerCount;
     timerCount--;
 
-    if (timerCount == 0) {
+    if (timerCount <= -1) {
       clearInterval(countDown);
-      timerCount.textContent = 60
-
     }
   }, 1000)
 }
