@@ -16,8 +16,8 @@ https://secretariuss.github.io/coding-quiz/
 
 The following scrshots shows the web application's:
 
-![scrshot1](./assets/images/pg1.png)
-![scrshot2](./assets/images/pg2.png)
+![scrshot1](./assets/images/pg1.PNG)
+![scrshot2](./assets/images/pg2.PNG)
 
 ## Acceptance Criteria
 GIVEN I am taking a code quiz
