@@ -59,7 +59,6 @@ button:hover {
 }
 
 button {
-  display: inline-block;
   cursor: pointer;
   color: #c0c6d1;
   outline: none;
@@ -86,4 +85,10 @@ button {
   padding-top: 10px;
   color: gray;
   border-top: 2px solid #ccc;
+}
+
+#questions {
+  display: flex;
+    flex-direction: column;
+    max-width: 600px;
 }

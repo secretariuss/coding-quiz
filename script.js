@@ -38,8 +38,8 @@ var endScreen = document.querySelector('end-screen');
 var finalScore = document.querySelector('#final-score');
 var initials = document.querySelector('#initials');
 var saveScore = document.querySelector('#save-score');
-var timerCount = 60;
-timerCount.textContent = 60;
+var timerCount = 76;
+timerCount.textContent = 76;
 var questiontrack = 0;
 var userScore = 0;
 
@@ -59,15 +59,15 @@ function showQuestions() {
   heading.textContent = questions[questiontrack].question
   for (var i = 0; i < questions[questiontrack].choices.length; i++) {
     var btn = document.createElement('button');
-    btn.textContent = questions[questiontrack].choices[i]
+    btn.textContent = questions[questiontrack].choices[i];
     choices.appendChild(btn);
-    btn.setAttribute("id", "options" + i)
+    btn.setAttribute("id", "choice" + i)
   }
 }
 
 choices.addEventListener("click", function (event) {
   var answer;
-  if (event.target.matches('button')) {
+  if (event.target.closest('button')) {
     var selected = event.target.textContent;
     for (var i = 0; i < questions[questiontrack].answer.length; i++) {
       answer = questions[questiontrack].answer;
@@ -86,7 +86,7 @@ choices.addEventListener("click", function (event) {
 
 function nextQuestion() {
   for (var i = 0; i < questions[questiontrack].choices.length; i++) {
-    var buttonChosen = document.querySelector('#options' + i);
+    var buttonChosen = document.querySelector('#choice' + i);
     buttonChosen.textContent = questions[questiontrack].choices[i];
   }
   heading.textContent = questions[questiontrack].question;
