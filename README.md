@@ -10,8 +10,7 @@ SO THAT I can gauge my progress compared to my peers
 Codinge Quiz starts when the start button is pressed. It is necessary to give answers to the questions. If the answer is wrong then the time is subtracted from the timer. When all the questions are answered or the timer reaches 0 and the game is over. User can save their result and display the result on the screen.
 
 ## Gitpage reference
-
-
+https://secretariuss.github.io/coding-quiz/
 
 ## Screen shots
 
