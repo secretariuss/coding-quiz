@@ -1,4 +1,4 @@
-# Password Generator
+# Code quiz
 
 ## User Story
 AS A coding boot camp student
